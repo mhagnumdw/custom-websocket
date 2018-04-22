@@ -1,0 +1,38 @@
+{
+  "name": "custom-websocket",
+  "version": "0.0.1",
+  "description": "A small JavaScript library that decorates the WebSocket API to provide a WebSocket reconnection",
+  "main": "custom-websocket.js",
+  "scripts": {
+    "test": "echo \"Starting tests...\" && nyc --reporter=html --reporter=text mocha -r jsdom-global/register"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mhagnumdw/custom-websocket.git"
+  },
+  "keywords": [
+    "websocket",
+    "browser",
+    "client",
+    "websocket-client",
+    "reconnecting",
+    "ping",
+    "heartbeat",
+    "keepalive"
+  ],
+  "author": "Dwouglas Mhagnum <dwouglas@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mhagnumdw/custom-websocket/issues"
+  },
+  "homepage": "https://github.com/mhagnumdw/custom-websocket#readme",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "jsdom": "11.8.0",
+    "jsdom-global": "3.0.2",
+    "mocha": "^5.1.1",
+    "nyc": "^11.7.1",
+    "sinon": "^4.5.0",
+    "ws": "^5.1.1"
+  }
+}
