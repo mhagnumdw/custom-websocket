@@ -39,5 +39,10 @@
     "rimraf": "^2.6.2",
     "sinon": "^4.5.0",
     "ws": "^5.1.1"
+  },
+  "nyc": {
+    "include": [
+      "custom-websocket.js"
+    ]
   }
 }
