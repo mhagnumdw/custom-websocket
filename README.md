@@ -17,9 +17,6 @@ you can replace with:
 var ws = new CustomWebSocket('ws://....');
 ```
 
-## // TODO:
-Minified library with gzip compression is less than 600 bytes.
-
 How reconnections occur
 -----------------------
 
@@ -146,6 +143,8 @@ function(event, attempts) {
 #### `ws.send(data)`
 - Transmits data to the server over the WebSocket connection.
 - Accepts @param data a text string, ArrayBuffer or Blob
+
+---
 
 *Based on*
 - https://github.com/joewalnes/reconnecting-websocket

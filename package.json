@@ -4,7 +4,10 @@
   "description": "A small JavaScript library that decorates the WebSocket API to provide a WebSocket reconnection",
   "main": "custom-websocket.js",
   "scripts": {
-    "test": "echo \"Starting tests...\" && nyc --reporter=html --reporter=text mocha -r jsdom-global/register"
+    "clean": "rimraf coverage custom-websocket.min.js",
+    "build": "minify custom-websocket.js -o custom-websocket.min.js",
+    "test": "echo \"Starting tests...\" && nyc --reporter=html --reporter=text mocha -r jsdom-global/register test/allTests.js",
+    "prepublish": "npm run clean && npm run build && npm run test"
   },
   "repository": {
     "type": "git",
@@ -27,12 +30,19 @@
   },
   "homepage": "https://github.com/mhagnumdw/custom-websocket#readme",
   "devDependencies": {
+    "babel-minify": "^0.4.0",
     "chai": "^4.1.2",
     "jsdom": "11.8.0",
     "jsdom-global": "3.0.2",
     "mocha": "^5.1.1",
     "nyc": "^11.7.1",
+    "rimraf": "^2.6.2",
     "sinon": "^4.5.0",
     "ws": "^5.1.1"
+  },
+  "nyc": {
+    "include": [
+      "custom-websocket.js"
+    ]
   }
 }
